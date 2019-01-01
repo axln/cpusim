@@ -207,9 +207,15 @@ Root.prototype.attachEventHandlers = function () {
         }).appendTo(modelControl);
     }
 
-    if (window.localStorage.getItem('modelIndex')) {
+    var urlParams = Helper.getURLParams();
+    //console.log('urlParams: ', urlParams);
+    if (urlParams.model && self.models[urlParams.model]) {
+        modelControl[0].selectedIndex = Object.keys(self.models).indexOf(urlParams.model);
+    } else if (window.localStorage.getItem('modelIndex')) {
         modelControl[0].selectedIndex = parseInt(window.localStorage.getItem('modelIndex'));
     }
+
+
 
     modelControl.change(function (event) {
         var modelId = modelControl[0].value;

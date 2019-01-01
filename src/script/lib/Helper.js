@@ -108,5 +108,25 @@ Helper.rectOverlap = function (rect1, rect2) {
     return xOverlap * yOverlap > 0;
 };
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Helper.getURLParams = function () {
+    var paramString = window.location.search.substring(1);
+    if (paramString.length > 0) {
+        var pairs = paramString.split('&');
+        var params = {};
+        pairs.forEach(function (pair) {
+            var parts = pair.split('=');
+            if (parts[0]) {
+                params[parts[0]] = parts[1];
+            } else {
+                params[parts[0]] = null;
+            }
+        });
+        return params;
+    } else {
+        return {};
+    }
+};
+
 
 module.exports = Helper;
