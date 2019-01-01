@@ -1,0 +1,6 @@
+.idea
+node_modules
+/build/css/styles.css
+/build/js/scripts.js
+/build/js/vendor.js
+/build/index.html
