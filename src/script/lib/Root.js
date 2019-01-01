@@ -396,9 +396,9 @@ Root.prototype.getVisibleArea = function () {
     var leftTop = self.canvasToModel({x: 0, y: 0});
     var bottomRight = self.canvasToModel({x: self.canvas.width, y: self.canvas.height});
     return {
-        left: leftTop.x,
-        top: leftTop.y,
-        right: bottomRight.x,
+        left  : leftTop.x,
+        top   : leftTop.y,
+        right : bottomRight.x,
         bottom: bottomRight.y
     };
 };

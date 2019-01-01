@@ -13,8 +13,8 @@ const collapse = require('bundle-collapser/plugin');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 gulp.task('clean', function () {
     return del([
-        'build/css/styles.css',
-        'build/js/scripts.js',
+        'build/css/style.css',
+        'build/js/script.js',
         'build/index.html'
     ]);
 });
