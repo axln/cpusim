@@ -3,6 +3,7 @@
 var RS     = require('../circuit/RS');
 var BusReg = require('../circuit/BusReg');
 var Switch = require('../Switch');
+var Label  = require('../Label');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 module.exports = function () {
@@ -32,8 +33,15 @@ module.exports = function () {
         Switch.createForInput(self, busReg.data[i]);
     }
 
+    var label = new Label({
+        left    : 10,
+        top     : 10,
+        title   : 'Sample Label',
+        fontSize: 12
+    });
+    self.addChild(label);
+
     return self.initChildren().then(function () {
         return self.initWires();
-
     });
 };
