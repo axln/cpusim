@@ -1,5 +1,7 @@
-# CPUSIM
+# CPU SIM
 This project is an attempt to create a simplest 8-bit CPU model descibed in the book [But How Do It Know](http://www.buthowdoitknow.com/) by J. Clark Scott.
 
 # Demo
-To see it in action just visit [https://axln.github.io/cpusim/build/?model=cpu](https://axln.github.io/cpusim/build/?model=cpu)
+To see it in action just visit [https://axln.github.io/cpusim/build/?model=cpu](https://axln.github.io/cpusim/build/?model=cpu) 
+
+Recommended to run on Google Chrome and was not tested in other browsers.
