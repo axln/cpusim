@@ -264,9 +264,10 @@ Root.prototype.attachEventHandlers = function () {
         zoomOut()
     });
 
-    $(self.canvas).bind('mousewheel', function (event) {
+    $(self.canvas).bind('mousewheel wheel', function (event) {
         var mousePoint = {x: event.offsetX, y: event.offsetY};
-        if (event.originalEvent.wheelDelta > 0) {
+        var delta = event.originalEvent.wheelDelta || (-event.originalEvent.deltaY);
+        if (delta > 0) {
             zoomIn(mousePoint);
         } else {
             zoomOut(mousePoint);

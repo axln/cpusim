@@ -1,0 +1,21 @@
+@import '../include/param';
+
+a {
+    color: #1059c9;
+    text-decoration: none;
+    &:visited {
+        color: #0D47A1;
+
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+    &.ext {
+        &:visited {
+            color: #1059c9;
+        }
+    }
+    &:active {
+        color: #CC0000 !important;
+    }
+}
